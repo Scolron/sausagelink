@@ -12,3 +12,8 @@ Thumbs.db
 #database#
 ##########
 *.db
+
+#eclipse#
+#########
+.pydevproject
+.project
