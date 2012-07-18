@@ -16,8 +16,11 @@ framework.
 import os
 import sys
 
-sys.path.append('home/coltonkinstley/Sites/sausagelink/urlshare')
-sys.path.append('home/coltonkinstley/Sites/sausagelink/')
+CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
+PROJECT_DIR = os.path.abspath(CURRENT_DIR + '/' + os.pardir)
+
+sys.path.append(CURRENT_DIR)
+sys.path.append(PROJECT_DIR)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "urlshare.settings")
 
 # This application object is used by any WSGI server configured to use this

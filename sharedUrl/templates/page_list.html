@@ -9,6 +9,7 @@
 	<header>
 	<h1>SausageLink</h1>
 	</header>
+	<div id = 'bookmarkform'>
 	<form name='get_username' action='/group/' method='get'>
 	<input type="text" name = "name"/>
 	<input type='submit' value='Submit'/>
@@ -29,8 +30,12 @@ window.open(f, 'title','height=200, width=400')">{{ bookmark }}</a>
 	<br/>
 	And, it will return to you your custom book mark.</p>
 	{% endif %}
-
+	</div>
+	
+	<div id= 'urllist'>
+	
 	{% if url_list %}
+	
 	<table>
 	<th>Webbsite</th>
 	<th>User</th>
@@ -46,6 +51,8 @@ window.open(f, 'title','height=200, width=400')">{{ bookmark }}</a>
 	{% else %}
 	<p>There is nothing shared</p>
 	{% endif %}
+	
+	</div>
 
 <footer>
 <p>If you have any sugestions or comments please email me at <a href='mailto:mail@sausagelink.co' />mail@sausagelink.co</a></p>
