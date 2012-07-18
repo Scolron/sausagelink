@@ -1,0 +1,59 @@
+<!doctype = "html">
+<html>
+<head>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<style>
+a:visited {color:DarkRed}
+h1 {color:DarkRed; font-family:sans-serif;}
+a {color:OrangeRed;}
+</style>
+<title>Sharing is caring</title></head>
+
+<body>
+	<header>
+	<h1>SausageLink</h1>
+	</header>
+	<form name='get_username' action='/group/' method='get'>
+	<input type="text" name = "name"/>
+	<input type='submit' value='Submit'/>
+	</form>
+	{% if bookmark %}
+	<p>Drag this link to your bookmarks bar --> <a href="javascript: f = 'http://24.155.229.243/add?url='
+			+ encodeURIComponent(window.location.href)
+			+ '&title='
+			+ encodeURIComponent(document.title)
+			+ '&user={{ bookmark }}';
+window.open(f, 'title','height=200, width=400')">{{ bookmark }}</a>
+	<br/>
+	Click it to add a link to this page.
+	<br/>
+	(You may have to accept a pop-up the first time.)</p>
+	{% else %}
+	<p>Enter the username you would like to be known by.
+	<br/>
+	And, it will return to you your custom book mark.</p>
+	{% endif %}
+
+	{% if url_list %}
+	<table>
+	<th>Webbsite</th>
+	<th>User</th>
+	<th>Time and Date</th>
+	{% for url in url_list %}
+	<tr>
+	<td><a href ='{{ url.url }}' target="_blank"/>{{ url.title }}</a></td>
+	<td>{{ url.user }}</td>
+	<td>{{ url.date }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% else %}
+	<p>There is nothing shared</p>
+	{% endif %}
+
+<footer>
+<p>If you have any sugestions or comments please email me at <a href='mailto:mail@sausagelink.co' />mail@sausagelink.co</a></p>
+</footer>
+</body>
+
+</html>
