@@ -2,21 +2,26 @@
 <html>
 <head>
 <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="/static/css/harvard_style.css" type='text/css'>
+<link rel="stylesheet" href="/static/css/corkboard_style.css" type='text/css'>
 <title>Sharing is caring</title></head>
 <style>
 </style>
 
 <body>
+<div id = 'container'>
 	<div id = 'header'>
 	<header>
-	<a href = 'http://www.sausagelink.co'><h1>SausageLink</h1></a>
+	<h1><a href = 'http://www.sausagelink.co'>YourLocalLinks</a></h1>
+	<ul id = 'themes'>
+	<li><a href = '/theme/corkboard/'>Corkboard | </a></li>
+	<li><a href = '/theme/harvard/'>Harvard</a></li>
+	</ul>
 	</header>
 	</div>
 	
 	<div id = 'bookmarkform'>
 	<h3>Get your bookmark here.</h3>
-	<form name='get_username' action='/group/' method='get'>
+	<form name='get_username' action='/theme/corkboard/' method='get'>
 	<input type="text" name = "name"/>
 	<input type='submit' value='Submit'/>
 	</form>
@@ -42,9 +47,12 @@ window.open(f, 'title','height=200, width=400')">{{ bookmark }}</a>
 	
 	
 	<table>
+	
+	<tr>
 	<th>Webbsite</th>
 	<th>User</th>
 	<th>Time and Date</th>
+	</tr>
 	{% if url_list %}
 	{% for url in url_list %}
 	<tr>
@@ -53,18 +61,40 @@ window.open(f, 'title','height=200, width=400')">{{ bookmark }}</a>
 	<td>{{ url.date }}</td>
 	</tr>
 	{% endfor %}
-	</table>
 	{% else %}
 	<tr>
 	<td><a href ='http://www.sausagelink.co'>The title of the webpage will be here as a link</a></td>
 	<td>The person who shared</td>
 	<td>December 7, 1941, 6:00 a.m.</td>
+	</tr>
+	{% if filler %}
+	{% for i in filler%}
+	<tr>
+	<td> {{ filler }} </td>
+	<td> {{ i }} </td>
+	<td> {{ i }} </td>
+	</tr>
+	{% endfor %}
+	{% else %}
 	{% endif %}
-
+	{% endif %}
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	<tr><td style = 'color:blue;text-align:left'>></td><td></td><td></td></tr>
+	</table>
 <div id='footer'>
 <footer>
 <p>If you have any suggestions or comments please contact me at <a href='mailto:mail@sausagelink.co' />mail@sausagelink.co</a></p>
 </footer>
+</div>
 </div>
 </body>
 

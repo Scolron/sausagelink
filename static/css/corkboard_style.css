@@ -1,0 +1,110 @@
+body {
+	background-image: url('../images/corkboard.gif');
+}
+
+#container {
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 25px;
+	color: #333333;
+}
+
+#header {
+	margin-bottom: 40px;
+	border-bottom: solid 2px #9900cc;
+	padding-bottom: 0px;
+}
+
+#header a {
+	text-decoration: none;
+	color: #9900cc;
+}
+
+#header h1 {
+	color: #9900cc;
+	font-family: sans-serif;
+	font-size: 3em;
+	display: inline;
+	margin-bottom: 5px;
+	display:inline;
+}
+
+#themes {
+	position:absolute;
+	top:23px;
+	right:32px
+}
+
+
+#themes li{
+	display:inline;
+	list-style:none;
+}
+
+#themes a {
+	color:ffffee;
+	font-size: 1.2em;
+}
+
+
+
+a:visited {
+	color: #990099;
+}
+
+a {
+	color: OrangeRed;
+}
+
+h3 {
+	margin-top: 0px
+}
+
+#bookmarkform {
+	font-family: sans-serif;
+	float: left;
+	margin-right: 30px;
+	width: 225px;
+	padding: 30px;
+	background-color: #ffff66;
+	padding-top: 20px;
+	box-shadow: 3px 5px 5px #222222;
+	margin-bottom: 20px;
+}
+
+#bookmarkform h3 {
+	color: blue;
+}
+
+table {
+	background-color: #ffffee;
+	margin-left: auto;
+	margin-right: auto;
+	color: #222222;
+	padding-top: 20px;
+	box-shadow: 3px 5px 5px #222222;
+	width:700px;
+}
+
+table th {
+	border-bottom: blue 1px solid;
+	font-size: 1.2em;
+	color: red;
+	font-family:sans-serif;
+}
+
+table td {
+	padding: 5px;
+	border-bottom: blue 1px solid;
+	text-align: center;
+}
+
+
+#footer {
+	font-family: sans-serif;
+	font-size: 1em;
+	position: absolute;
+	bottom: 25px;
+	color: #990099;
+}

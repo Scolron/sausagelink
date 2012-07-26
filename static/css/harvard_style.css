@@ -10,3 +10,15 @@ table {margin-left:auto;margin-right:auto;}
 table th {border-bottom:#222222 1px solid;font-size:1.2em;}
 table td {padding:5px;}
 #footer {position:absolute; bottom:25px;}
+
+#themes {
+	position:absolute;
+	top:23px;
+	right:32px;
+}
+
+
+#themes li{
+	display:inline;
+	list-style:none;
+}
