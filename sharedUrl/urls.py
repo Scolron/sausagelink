@@ -5,9 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('sharedUrl.views',
-    url(r'^$', 'showGroupHarvard'),
-    url(r'^add/$', 'add'),
-    url(r'^confirm/$', 'confirm'),
-    url(r'^theme/[hH]arvard', 'showGroupHarvard'),
-    url(r'^theme/[Cc]orkboard', 'showGroupCorkboard'),
+    url(r'^home/$', 'home'),
+    url(r'^add/$', 'confirm'),
+    url(r'^confirm/', 'confirm'),
 )
