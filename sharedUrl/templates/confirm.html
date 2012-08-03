@@ -1,10 +1,29 @@
 <!doctype = 'html'>
 <html>
+<head>
+<link href='/static/bootstrap/docs/assets/css/bootstrap.css'
+	rel='stylesheet' />
+</head>
 <body>
-<form name='get_username' action='/' method='get'>
-	<input value = 'javascript:' type="text" name = "name"/>
-	<input type='submit' value='Submit'/>
+<div style = 'padding:0px;' class = 'container-fluid'>
+<div class = 'row-fluid'>
+<div class = 'span12'>
+<form style = 'height:160px; margin:auto; padding-top:60px;' class = 'well form-vertical' name='Confirm Share' action='/confirm/' method='post'>
+	<label style = 'padding-left:auto;padding-right:auto; text-align:center;'><h1>Website Name</h1></label>
+	
+	<input style = 'display:block; margin-left:auto;margin-right:auto;width:225px; text-align:center;height:40px;font-size:1.2em;' value = '{{ title }}' type="text" name = 'title'/>
+	
+	<input value = '{{ user }}' type = 'hidden' name = 'user' />
+	<input value = '{{ url }}' type = 'hidden' name = 'url' />
+	<div style = 'width:225;margin-right:auto;margin-left:auto; clear:both;'>
+	<button style = 'width:60px; height:40px;'class = 'btn btn-danger' onclick= 'javascript:window.close()'>Cancel</button>
+	<button style = 'width:160px; height:40px;' class = 'btn btn-success' type = 'submit' =>Submit</button>
+	</div>
+	{% csrf_token %}
 	</form>
+</div>
+</div>
+</div>
 
 
 </body>

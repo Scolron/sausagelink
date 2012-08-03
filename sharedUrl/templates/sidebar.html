@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+				{% if bookmark %}
+				<div class='span4'>
+				<div class ='alert alert-success span12' style="margin-left:9px;">
+				<button class="close" data-dismiss="alert">×</button>
+				<p><h4>Drag this link ---> <strong><a
+						href="javascript: f = 'http://apocalinksnow.com/add?url='
+			+ encodeURIComponent(window.location.href)
+			+ '&title='
+			+ encodeURIComponent(document.title)
+			+ '&user={{ bookmark }}';
+window.open(f, 'title','height=200, width=400')">
+				{{bookmark }}</a></strong> up into your bookmarks bar.</h4></p>
+				<p>When you're on a page you want to share just click it!</p>
+				</div>
+				
+				<div class = 'span12 well'>
+				<h2>Get your username</h2>
+				<form class="" action = '/home/'>
+				<input name = 'name' type="text" class="span12"
+						placeholder="Choose any name you want">
+						<span class="help-block span12"><h3>Three easy steps!</h3>
+				<ol>
+				<li><span class="badge badge-success">✓</span>  Get your bookmark</li>
+				<li>Drag it to your bookmarks bar</li>
+				<li>Click your new bookmark to add a link to this page</li>
+				</ol></span>
+					<button type="submit" class="btn btn-success btn-large">Submit</button>
+				</form>
+				</div>
+				</div>
+				
+				
+				{% else %}
+				<div class = 'span4 well'>
+				<h2>Get your username</h2>
+				<form class="" action = '/home/'>
+					<input name = 'name' type="text" class="span12"
+						placeholder="Choose any name you want">
+						<span class="help-block span12"><h3 style = 'text-align:center;'>Three easy steps!</h3>
+				<ol>
+				<li>Your username is your bookmark</li>
+				<li>Drag it to your bookmarks bar</li>
+				<li>Click your new bookmark to share links to this page</li>
+				</ol></span>
+					<button type="submit" class="btn btn-success btn-large">Get Your Bookmark</button>
+				</form>
+				</div>
+				{% endif %}
+
+{% endblock sidebar %}

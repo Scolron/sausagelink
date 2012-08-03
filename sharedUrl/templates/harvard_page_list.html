@@ -19,8 +19,8 @@
 	</div>
 	
 	<div id = 'bookmarkform'>
-	<h3>Get your bookmark here.</h3>
-	<form name='get_username' action='/' method='get'>
+	<h3>Get your username.</h3>
+	<form name='get_username' action=' {% url sharedUrl.views.showGroupHarvard %} ' method='get'>
 	<input type="text" name = "name"/>
 	<input type='submit' value='Submit'/>
 	</form>
@@ -32,13 +32,13 @@
 			+ '&user={{ bookmark }}';
 window.open(f, 'title','height=200, width=400')">{{ bookmark }}</a>
 	<br/>
-	Click it to add a link to this page.
+	All you have to do is click it to add a webpage to this list.
 	<br/>
 	(You may have to accept a pop-up the first time.)</p>
 	{% else %}
-	<p>Enter the username you would like to be known by.
+	<p>Enter the username you want.
 	<br/>
-	And, it will return to you your custom bookmark.</p>
+	You'll get a bookmark to share with.</p>
 	{% endif %}
 	</div>
 	
