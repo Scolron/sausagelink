@@ -4,21 +4,27 @@
 <link href='/static/bootstrap/docs/assets/css/bootstrap.css'
 	rel='stylesheet' />
 </head>
+<title>ApocalinksNow | Confirm</title>
 <body>
+<script
+		src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js'></script>
+	<script src='/static/bootstrap/docs/assets/js/bootstrap.js'></script>
 <div style = 'padding:0px;' class = 'container-fluid'>
 <div class = 'row-fluid'>
 <div class = 'span12'>
-<form style = 'height:160px; margin:auto; padding-top:60px;' class = 'well form-vertical' name='Confirm Share' action='/confirm/' method='post'>
-	<label style = 'padding-left:auto;padding-right:auto; text-align:center;'><h1>Website Name</h1></label>
+
+
+<form style = 'margin:0px;padding-top:40px;height:250px' class = 'well form-vertical' name='Confirm Share' action='/confirm/' method='post'>
+	<label style = 'margin-left:auto;margin-right:auto; text-align:center;width:310;'><h1>Site Name</h1></label>
 	
-	<input style = 'display:block; margin-left:auto;margin-right:auto;width:225px; text-align:center;height:40px;font-size:1.2em;' value = '{{ title }}' type="text" name = 'title'/>
+	<input style = 'display:block; margin-left:auto;margin-right:auto;width:325px; text-align:center;height:40px;font-size:1.2em;' value = '{{ title }}' type="text" name = 'title'/>
+	<div style = 'height:60px; margin-right:auto; margin-left:auto; width:290px'>
+	<button style = 'width:190px; height:auto; margin-left:auto;float:right;' class = 'btn btn-success' type = 'submit'>Submit</button>
+	<button style = 'width:90px; height:auto; margin-right:auto; float:left;'class = 'btn btn-danger' onclick= 'javascript:window.close()'>Cancel</button>
+	</div>
 	
 	<input value = '{{ user }}' type = 'hidden' name = 'user' />
 	<input value = '{{ url }}' type = 'hidden' name = 'url' />
-	<div style = 'width:225;margin-right:auto;margin-left:auto; clear:both;'>
-	<button style = 'width:60px; height:40px;'class = 'btn btn-danger' onclick= 'javascript:window.close()'>Cancel</button>
-	<button style = 'width:160px; height:40px;' class = 'btn btn-success' type = 'submit' =>Submit</button>
-	</div>
 	{% csrf_token %}
 	</form>
 </div>
