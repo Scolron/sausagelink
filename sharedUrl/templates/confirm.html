@@ -5,7 +5,7 @@
 	rel='stylesheet' />
 </head>
 <title>ApocalinksNow | Confirm</title>
-<body>
+<body onload = 'document.Confirm.submit.focus();'>
 <script
 		src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js'></script>
 	<script src='/static/bootstrap/docs/assets/js/bootstrap.js'></script>
@@ -14,12 +14,12 @@
 <div class = 'span12'>
 
 
-<form style = 'margin:0px;padding-top:40px;height:250px' class = 'well form-vertical' name='Confirm Share' action='/confirm/' method='post'>
+<form style = 'margin:0px;padding-top:40px;height:250px' class = 'well form-vertical' name='Confirm' action='/confirm/' method='post'>
 	<label style = 'margin-left:auto;margin-right:auto; text-align:center;width:310;'><h1>Site Name</h1></label>
 	
 	<input style = 'display:block; margin-left:auto;margin-right:auto;width:325px; text-align:center;height:40px;font-size:1.2em;' value = '{{ title }}' type="text" name = 'title'/>
 	<div style = 'height:60px; margin-right:auto; margin-left:auto; width:290px'>
-	<button style = 'width:190px; height:auto; margin-left:auto;float:right;' class = 'btn btn-success' type = 'submit'>Submit</button>
+	<button style = 'width:190px; height:auto; margin-left:auto;float:right;' class = 'btn btn-success' type = 'submit' name = 'submit'>Submit</button>
 	<button style = 'width:90px; height:auto; margin-right:auto; float:left;'class = 'btn btn-danger' onclick= 'javascript:window.close()'>Cancel</button>
 	</div>
 	
