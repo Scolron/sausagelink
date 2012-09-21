@@ -60,6 +60,23 @@ def home(request):
     return render(request,'sidebar.html',{'url_list':url_list,'bookmark':bookmark})
 
 
+def user(request,user):
+    userList = SharedSite.objects.all().filter(user=user).order_by('-pk')
+    try:
+        bookmark = request.GET['name']
+    except(Exception):
+        bookmark = ''
+    if userList:
+        return render(request, 'sidebar.html', {'url_list':userList, 'bookmark':bookmark})
+    else:
+        i = request.META['REMOTE_ADDR']
+        url_list = SharedSite.objects.all().filter(ip=i).order_by('-pk')[:30]
+        return render(request, 'sidebar.html', {'url_list':url_list, 'bookmark':bookmark})
+         
+    
+    
+
+
 
 
 

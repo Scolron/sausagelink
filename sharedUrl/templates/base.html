@@ -3,7 +3,7 @@
 <head>
 <link href='/static/bootstrap/docs/assets/css/bootstrap.css'
 	rel='stylesheet' />
-	<title>ApocalinksNow.com</title>
+	<title>ApocalinksNow.com</a></title>
 	
 </head>
 
@@ -23,7 +23,6 @@
 		<div class='row-fluid'>
 		{% block sidebar %}
 		{% endblock sidebar %}
-
 			<div class='span8'>
 				<table class='table table-striped'>
 					<thead>
@@ -35,12 +34,11 @@
 							<th><h3>Time and Date</h3></th>
 						</tr>
 					</thead>
-
 					<tbody>
 						{% if url_list %} {% for url in url_list %}
 						<tr>
 							<td><a href='{{ url.url }}' target="_blank" /> {{ url.title }} </a></td>
-							<td>{{ url.user }}</td>
+							<td><a href = '/user/{{ url.user }}'>{{ url.user }}</a></td>
 							<td>{{ url.date }}</td>
 						</tr>
 						{% endfor %}
@@ -54,12 +52,9 @@
 					
 					{% endif %}
 					</tbody>
+					</table>
 			</div>
 		</div>
 	</div>
-
-
-
-
 </body>
 </html>

@@ -9,4 +9,5 @@ urlpatterns = patterns('sharedUrl.views',
     url(r'^home/$', 'home'),
     url(r'^add/$', 'confirm'),
     url(r'^confirm/', 'confirm'),
+    url(r'^user/(?P<user>.*)/$', 'user'),
 )
